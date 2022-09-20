@@ -1,0 +1,47 @@
+<div class="col-md-6 offset-md-3">
+
+<div class="container">
+<form (ngSubmit)="onSubmit()">
+    <h2>Register New Patient</h2>
+    <div class="form-group">
+        <label for="">Name</label>
+        <input type="text" class="form-control" id="name" name="name" required
+        [(ngModel)]="patient.patientName">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="">Age</label>
+        <input type="text" class="form-control" id="age1" name="age"
+        [(ngModel)]="patient.patientAge">
+    </div>
+    <br>
+    select doctor
+    <br>
+    <select (change)="onSelect()" [(ngModel)]="patient.visitedDoctor" name="select1">
+        
+        <option *ngFor="let doctor of listDoctors" value="{{doctor.doctorName}}">{{doctor.doctorName}}</option>
+    </select>
+    
+<br>
+<br>
+Select Date:
+<br>
+ <input type="date" [(ngModel)]="patient.dateOfVisit" name="date1" value="yyyy-month-date">
+
+
+<br> 
+<br>
+<button class="btn btn-success" type="submit">Submit</button>
+
+ 
+
+</form> 
+<span [(ngModel)]="mySpan"> patient submisiion successful</span>
+</div>
+
+
+
+
+
+
+

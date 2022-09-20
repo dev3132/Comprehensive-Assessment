@@ -1,0 +1,23 @@
+<div class="search1">
+  <div class="input-group">
+    <input [(ngModel)]="patientId"  type="search" class="form-control rounded" placeholder="patient id" aria-label="Search" aria-describedby="search-addon" />
+    <button (click)="getPatient()" type="button" class="btn btn-outline-primary">search</button>
+  </div>
+</div>
+<br>
+<table class="table table-striped" disabled>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Visited Doctor</th>
+            <th>Date Of Visit</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+
+    </tbody>
+</table>
+
+
